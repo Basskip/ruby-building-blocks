@@ -62,7 +62,11 @@ module Enumerable
     def my_count
         count = 0
         self.my_each do |item|
-            if yield(item)
+            if block_given?
+                if yield(item)
+                    count += 1
+                end
+            else
                 count += 1
             end
         end

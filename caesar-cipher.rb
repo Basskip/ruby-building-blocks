@@ -20,7 +20,3 @@ def caesar_cipher(string, shift)
     end
     return ciphertext
 end
-
-text = gets.chomp
-shift = gets.chomp
-puts caesar_cipher(text, shift.to_i)
